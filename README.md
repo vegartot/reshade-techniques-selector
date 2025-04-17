@@ -19,8 +19,8 @@ The program generates a text file you can use during ReShade installation to sel
 > ### If you wish to add new presets requiring different effects, update the effects via the ReShade executable by repeating the steps above.
 
 ## BUILD
-Use Microsoft Visual Studio build tools to build the program yourself with the provided [Makefile](Makefile).
+Use Microsoft Visual Studio build tools to build the program yourself with the provided [Makefile](Makefile)
 ```make
 make main.obj
 ```
-Alternatively download the pre-compiled binaries <link>ss</link>
+Alternatively download the [pre-compiled binaries](https://github.com/vegartot/reshade-techniques-selector/releases/tag/0.0.1)
