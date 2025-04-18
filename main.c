@@ -33,12 +33,6 @@ int __stdcall main(void)
         hr = pItem->lpVtbl->GetDisplayName(pItem, SIGDN_FILESYSPATH, &fileName);
         if (FAILED(hr)) goto NAME_ERROR;
 
-        if (directoryPath == NULL)
-        {
-            // Set path for writing to file later
-            pItem->lpVtbl->GetDisplayName(pItem, SIGDN_DESKTOPABSOLUTEPARSING, &directoryPath);
-        }
-
         // Open file for reading
         char buffer[MAX_READ_BYTES] = { 0 };
         HANDLE fHandle = CreateFileW(fileName, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, 0, NULL);
@@ -59,7 +53,8 @@ int __stdcall main(void)
             {
             
                 case '\0':          // Null-term
-                case '\r':          // Newline
+                case '\r':          // Carriage return
+                case '\n':          // Newline
                     EOF = 1;
                     pushIfNew(&pHead, startByte, endByte);
                     break;
