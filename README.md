@@ -23,4 +23,4 @@ Use Microsoft Visual Studio build tools to build the program yourself with the p
 ```make
 make main.obj
 ```
-Alternatively download the [pre-compiled binaries](https://github.com/vegartot/reshade-techniques-selector/releases/tag/0.0.1)
+Alternatively download the [pre-compiled binaries](https://github.com/vegartot/reshade-techniques-selector/releases)
